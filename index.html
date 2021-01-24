@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Colresh</title>
+		<style>
+			h1, h2, h3, h4, h5, p {
+				line-height: 150%;
+				margin: 0px;
+			}
+
+			p {
+				text-indent: 3em;
+			}
+
+			.prof {
+				display: inline-block;
+				margin: 0;
+				width: 20%;
+			}
+
+			.abil {
+				display: inline-block;
+				vertical-align: top;
+				width: 70%;
+			}
+
+			.no-bullets li {
+				list-style: none;
+			}
+
+			.exp {
+				font-weight: 600;
+			}
+
+			.tbd {
+				color: green;
+			}
+
+			ul {
+				padding: 0px;
+				margin: 0px;
+				margin-left: 1em;
+			}
+
+			.no-indent {
+				margin-left: 0px;
+			}
+
+			.race {
+				font-style: italic;
+			}
+
+			.class  {
+				font-weight: 600;
+			}
+
+			.two-col {
+				column-count: 2;
+			}
+
+			.three-col {
+				column-count: 3;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="header">
+			<h1>Colresh</h1>
+			<span class="race">Variant Human</span>,
+			<span class="class">Gloom Stalker Ranger 2</span>,
+			<span class="class">Inquisitive Rogue 1</span><br/>
+			<span>Neutral Good, Follower of Irimar</span>
+		</div>
+		<div class="stats">
+			<table>
+				<tr>
+					<th>STR</th>
+					<th>DEX</th>
+					<th>CON</th>
+					<th>INT</th>
+					<th>WIS</th>
+					<th>CHA</th>
+				</tr>
+				<tr>
+					<td>11 (0)</td>
+					<td>16 (+3)</td>
+					<td>15 (+2)</td>
+					<td>13 (+1)</td>
+					<td>18 (+4)</td>
+					<td>9 (-1)</td>
+				</tr>
+			</table>
+			<div class="achp">
+				<div class="half">HP: 24</div>
+				<div class="half">AC: 15</div>
+			</div>
+		</div>
+		<div class="body">
+			<div class="prof">
+				<h3>Saving Throws</h3>
+				<ul class="no-bullets">
+					<li>Strength: +2</li>
+					<li>Dexterity: +5</li>
+				</ul>
+				<h3>Skill Proficiencies</h3>
+				<ul class="no-bullets">
+					<li class="exp">Perception: +8 (23)</li>
+					<li class="exp">Investigation: +5 (20)</li>
+					<li>Stealth: +5</li>
+					<li>Athletics: +2</li>
+					<li class="exp">Insight: +8</li>
+				</ul>
+				<h3>Combat Proficiencies</h3>
+				<ul class="no-bullets">
+					<li>Light Armor</li>
+					<li>Medium Armor</li>
+					<li>Shields</li>
+					<li>Simple Weapons</li>
+					<li>Martial Weapons</li>
+				</ul>
+				<h3>Languages</h3>
+				<ul>
+					<li>Common</li>
+					<li>Elvish</li>
+					<li class="tbd">Another</li>
+					<li>Dwarvish</li>
+					<li>Gnomish</li>
+					<li class="tbd">Another</li>
+				</ul>
+			</div>
+			<div class="abil">
+				<h2>Weapons</h2>
+				<h2>Abilities</h2>
+				<div>
+					<h3>Observant</h3>
+					<p> If you can see a creature's mouth while it is speaking a language you understand, you can interpret what it's saying by reading its lips.</p>
+					<p>You have +5 bonus to your passive Wisdom(Perception) and Intelligence(Investigation) scores.</p>
+				</div>
+				<div>
+					<h3>Favored Enemy : Undead</h3>
+					<p>You have advantage on Wisdom (Survival) checks to track your favored enemies, as well as on Intelligence checks to recall information about them.
+						When you gain this feature, you also learn one language of your choice that is spoken by your favored enemies, if they speak one at all.
+						You choose one additional favored enemy, as well as an associated language, at 6th and 14th level. As you gain levels, your choices should reflect the types of monsters you have encountered on your adventures.
+					</p>
+				</div>
+				<div>
+					<h3>Deft Explorer</h3>
+					<h4>Canny</h4>
+					<p> Choose one of your skill proficiencies. Your proficiency bonus is doubled for any ability check you make using the chosen skill.
+						You can also speak, read, and write 2 additional languages of your choice.</p>
+				</div>
+				<div>
+					<h3>Fighting Style : Blind Fighting</h3>
+					<p>You have blind sight with a range of 10 feet. Within that range, you can effectively see anything that isn't behind total cover, even if you're blinded or in darkness. Moreover, you can see an invisible creature within that range, unless the creature successfully hides from you.</p>
+				</div>
+				<div>
+					<h3>Spellcasting</h3>
+					<h4>Spells Known and Slots</h4>
+					<table>
+						<tr>
+							<th>Spells Known</th>
+							<th>Lvl 1</th>
+							<th>Lvl 2</th>
+						</tr>
+						<tr>
+							<td>2</td>
+							<td>2</td>
+							<td>-</td>
+						</tr>
+					</table>
+					<h4>Spell List</h4>
+					<ul class="no-bullets">
+						<li class="tbd">Spell</li>
+					</ul>
+					<ul class="no-bullets no-indent">
+						<li class="exp">Save DC: 14</li>
+						<li class="exp">ATK Bonus: +6</li>
+					</ul>
+				</div>
+				<div>
+					<h3>Expertise</h3>
+					<p>
+						Choose 2 of your skill proficiencies. Your proficiency bonus is doubled for any ability check you make that uses either of the chosen proficiencies.
+					</p>
+				</div>
+				<div>
+					<h3>Sneak Attack</h3>
+					<p>
+						Once per turn, you can deal an extra 1d6 damage to one creature you hit with an attack if you have advantage on the attack roll. The attack must use a finesse or ranged weapon. You don't need advantage on the attack roll if another enemy of the target is within 5 feet of it, that enemy isn't incapacitated, and you don't have disadvantage on the attack roll.
+					</p>
+				</div>
+				<div>
+					<h3>Thieves' Cant</h3>
+					<p>Thieves can't do nothing write, evun spel</p>
+				</div>
+				<h2>Inventory</h2>
+				<ul class="three-col">
+					<li>75 GP</li>
+					<li>Studded Leather</li>
+					<li>Rapier</li>
+					<li>Burglar's Pack</li>
+					<ul>
+						<li>Backpack</li>
+						<li>bag of 1000 ball bearings</li>
+						<li>10ft string</li>
+						<li>bell</li>
+						<li>5 candles</li>
+						<li>crowbar</li>
+						<li>hammer</li>
+						<li>10 pitons</li>
+						<li>hooded lantern</li>
+						<li>2 flasks of oil</li>
+						<li>5 rations</li>
+						<li>tinderbox</li>
+						<li>waterskin</li>
+					</ul>
+					<li>Diplomat's Pack</li>
+					<ul>
+						<li>Chest</li>
+						<li>2 cases for maps and scrolls</li>
+						<li>Fine clothes</li>
+						<li>Bottle of Ink</li>
+						<li>Ink Pen</li>
+						<li>lamp</li>
+						<li>2 flasks of oil</li>
+						<li>5 sheets of paper</li>
+						<li>Perfume (Vial)</li>
+						<li>Sealing Wax</li>
+						<li>Soap</li>
+					</ul>
+					<li>Thieve' Tools</li>
+					<li>Manacles</li>
+					<li>Forgery Kit</li>
+					<li>--- --- ---</li>
+					<li>A purple handkerchief embroidered with the name of a powerful archmage</li>
+				</ul>
+				<h2>Backstory</h2>
+				<p class="three-col">
+					At the age of 5 Colresh's family moved to the town of Brownsburg. It was there that his father, Barold, found employment as a blacksmith's apprentice for several years. Eventually Barold inherited the smithy from his master took on apprentices of his own. During this time Colresh would often be found working his way through the many caves and forests that dotted the hills near Brownsburg. As he matured he took a liking to books of learning, inspiring him to search for truth and reason in all things. He took a particular interest in the motivations of the people around him. At the age of 20, a group of mercenaries kidnapped a prominent political figure, who was visiting Brownsburg. Using his excellent skills of perception and insight, he was able to track down the mercenaries and recover the prominent political figure. Since then Colresh has travelled from town to town serving as both an investigator and political ally.
+				</p>
+			</div>
+		</div>
+	</body>
+</html>
