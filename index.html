@@ -70,6 +70,7 @@
 			<span class="class">Gloom Stalker Ranger 2</span>,
 			<span class="class">Inquisitive Rogue 1</span><br/>
 			<span>Neutral Good, Follower of Irimar</span>
+			<input id="avrae" />
 		</div>
 		<div class="stats">
 			<table>
@@ -99,16 +100,16 @@
 			<div class="prof">
 				<h3>Saving Throws</h3>
 				<ul class="no-bullets">
-					<li>Strength: +2</li>
-					<li>Dexterity: +5</li>
+					<li mod="str_save" roll="Strength Save">Strength: +2</li>
+					<li mod="dex_save" roll="Dexterity Save">Dexterity: +5</li>
 				</ul>
 				<h3>Skill Proficiencies</h3>
 				<ul class="no-bullets">
-					<li class="exp">Perception: +8 (23)</li>
-					<li class="exp">Investigation: +5 (20)</li>
-					<li>Stealth: +5</li>
-					<li>Athletics: +2</li>
-					<li class="exp">Insight: +8</li>
+					<li class="exp" mod="perception" roll="Perception">Perception: +8 (23)</li>
+					<li class="exp" mod="investigation" roll="Investigation">Investigation: +5 (20)</li>
+					<li mod="stealth" roll="Stealth">Stealth: +5</li>
+					<li mod="athletics" roll="Athletics">Athletics: +2</li>
+					<li mod="insight" roll="Insight" class="exp">Insight: +8</li>
 				</ul>
 				<h3>Combat Proficiencies</h3>
 				<ul class="no-bullets">
@@ -241,4 +242,63 @@
 			</div>
 		</div>
 	</body>
+	<script>
+		let mods = {
+			strength: 0,
+			dexterity: 3,
+			constitution: 2,
+			intelligence: 1,
+			wisdom: 4,
+			charisma: -1,
+
+			str_save: 2,
+			dex_save: 5,
+
+			perception: 8,
+			investigation: 5,
+			stealth: 5,
+			athletics: 2,
+			insight: 8,
+		}
+
+		function generateRoll(data) {
+			let res = "!r 1d20";
+			if (data.adv && ! data.dis) {
+				res = "!r 2d20kh1"
+			} else if (data.dis && ! data.adv) {
+				res = "!r 2d20kl1"
+			}
+
+			if (data.mod) {
+				res += `+${data.mod}`;
+			}
+
+			if (data.roll) {
+				res += ` ${data.roll}`;
+			}
+
+			return res;
+		}
+
+		onclick = (e) => {
+			let data = {};
+			if (e.target.getAttribute("mod")) {
+				data.mod = mods[e.target.getAttribute("mod")];
+			}
+			if (e.target.getAttribute("roll")) {
+				data.roll = e.target.getAttribute("roll");
+			}
+			if (e.ctrlKey) {
+				data.adv = true;
+			}
+			if (e.shiftKey) {
+				data.dis = true;
+			}
+
+			if (data.mod) {
+				let rollCommand = generateRoll(data);
+				document.getElementById("avrae").value = rollCommand;
+			}
+		}
+	</script>
 </html>
