@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Event Doer</title>
+	</head>
+	<body>
+		<div id="gameBox">
+			<div id="logBox">
+
+			</div>
+			<div id="entryBox">
+				<input id="eventName" type="text" placeholder="Name" />
+				<input id="interval" type="number" placeholder="Interval" />
+				<input id="iters" type="number" placeholder="# Times" />
+				<input type="button" onclick="addEvent()" value="Add Event">
+			</div>
+		</div>
+	</body>
+	<script src="whateverIWantToNameThis.js"></script>
+	<style>
+		@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+		
+		html {
+			background-color: black;
+			font-family: 'Roboto';
+		}
+
+		#logBox {
+			background-color: #AAAAAA77;
+			height: 500px;
+			overflow: scroll;
+			scrollbar-width: none;
+			padding: 0px;
+			margin: 0px;
+			width: 50%;
+		}
+
+		#logBox::-webkit-scrollbar {
+			display: none;
+		}
+	</style>
+</html>
