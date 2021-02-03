@@ -1,0 +1,52 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap');
+
+
+html {
+	background-color: black;
+	font-family: 'Roboto';
+	color: white;
+}
+
+h1, h2, h3 {
+	font-family: "Open Sans";
+	font-weight: 300;
+	line-height: 150%;
+	margin: 0px;
+}
+
+input[type="text"], input[type="number"] {
+	display: block;
+	padding: 6px;
+	font-size: 20px;
+}
+
+input[type="button"] {
+	display: block;
+	padding: 6px;
+	font-size: 20px;
+	width: 259px;
+}
+
+#logBox {
+	background-color: #AAAAAA77;
+	height: 500px;
+	overflow: scroll;
+	scrollbar-width: none;
+	padding: 0px;
+	margin: 0px;
+	width: 50%;
+	display: inline-block;
+}
+#entryBox {
+	height: 500px;
+	margin: 0px;
+	padding: 0px;
+	display: inline-block;
+	vertical-align: top;
+}
+
+#logBox::-webkit-scrollbar {
+	display: none;
+}
