@@ -67,7 +67,7 @@
 		<div class="header">
 			<h1>Colresh</h1>
 			<span class="race">Variant Human</span>,
-			<span class="class">Gloom Stalker Ranger 2</span>,
+			<span class="class">Gloom Stalker Ranger 3</span>,
 			<span class="class">Inquisitive Rogue 1</span><br/>
 			<span>Neutral Good, Follower of Irimar</span>
 			<input id="avrae" />
@@ -92,8 +92,9 @@
 				</tr>
 			</table>
 			<div class="achp">
-				<div class="half">HP: 24</div>
+				<div class="half">HP: 34</div>
 				<div class="half">AC: 15</div>
+				<div class="half" mod="init" roll="Initiative">INIT: + 7</div>
 			</div>
 		</div>
 		<div class="body">
@@ -123,10 +124,10 @@
 				<ul>
 					<li>Common</li>
 					<li>Elvish</li>
-					<li class="tbd">Another</li>
+					<li>Draconic</li>
 					<li>Dwarvish</li>
 					<li>Gnomish</li>
-					<li class="tbd">Another</li>
+					<li>Sylvan</li>
 				</ul>
 			</div>
 			<div class="abil">
@@ -165,13 +166,16 @@
 						</tr>
 						<tr>
 							<td>2</td>
-							<td>2</td>
+							<td>3</td>
 							<td>-</td>
 						</tr>
 					</table>
 					<h4>Spell List</h4>
 					<ul class="no-bullets">
-						<li class="tbd">Spell</li>
+						<li>Hunter's Mark</li>
+						<li>Cure Wounds</li>
+						<li>Fog Cloud</li>
+						<li>Disguise Self</li>
 					</ul>
 					<ul class="no-bullets no-indent">
 						<li class="exp">Save DC: 14</li>
@@ -193,6 +197,28 @@
 				<div>
 					<h3>Thieves' Cant</h3>
 					<p>Thieves can't do nothing write, evun spel</p>
+				</div>
+				<div>
+					<h3>Primeval Awareness</h3>
+					<p>
+						Beginning at 3rd level, you can use your action and expend one ranger spell slot to focus your awareness on the region around you. For 1 minute per level of the spell slot you expend, you can sense whether the following types of creatures are present within 1 mile of you (or within up to 6 miles if you are in your favored terrain): aberrations, celestials, dragons, elementals, fey, fiends, and undead. This feature doesn’t reveal the creatures’ location or number.
+					</p>
+				</div>
+				<div>
+					<h3>Gloom Stalker Magic</h3>
+					<p>The following spells counts as a ranger spell for you, but do not count against the number of ranger spells you know : Disguise Self</p>
+				</div>
+				<div>
+					<h3>Dread Ambusher</h3>
+					<p>At 3rd level, you master the art of the ambush. You can give yourself a bonus to your initiative rolls equal to your Wisdom modifier.
+
+						At the start of your first turn of each combat, your walking speed increases by 10 feet, which lasts until the end of that turn. If you take the Attack action on that turn, you can make one additional weapon attack as part of that action. If that attack hits, the target takes an extra 1d8 damage of the weapon's damage type.</p>
+				</div>
+				<div>
+					<h3>Umbral Sight</h3>
+					<p>At 3rd level, you gain darkvision out to a range of 60 feet. If you already have darkvision from your race, its range increases by 30 feet.
+
+						You are also adept at evading creatures that rely on darkvision. While in darkness, you are invisible to any creature that relies on darkvision to see you in that darkness.</p>
 				</div>
 				<h2>Inventory</h2>
 				<ul class="three-col">
@@ -259,6 +285,7 @@
 			stealth: 5,
 			athletics: 2,
 			insight: 8,
+			init: 3+4,
 		}
 
 		function generateRoll(data) {
