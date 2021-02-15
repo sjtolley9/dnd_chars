@@ -68,7 +68,7 @@
 			<h1>Colresh</h1>
 			<span class="race">Variant Human</span>,
 			<span class="class">Gloom Stalker Ranger 3</span>,
-			<span class="class">Inquisitive Rogue 1</span><br/>
+			<span class="class">Inquisitive Rogue 4</span><br/>
 			<span>Neutral Good, Follower of Irimar</span>
 			<input id="avrae" />
 		</div>
@@ -86,7 +86,7 @@
 					<td>11 (0)</td>
 					<td>16 (+3)</td>
 					<td>15 (+2)</td>
-					<td>13 (+1)</td>
+					<td>14 (+2)</td>
 					<td>18 (+4)</td>
 					<td>9 (-1)</td>
 				</tr>
@@ -106,11 +106,11 @@
 				</ul>
 				<h3>Skill Proficiencies</h3>
 				<ul class="no-bullets">
-					<li class="exp" mod="perception" roll="Perception">Perception: +8 (23)</li>
-					<li class="exp" mod="investigation" roll="Investigation">Investigation: +5 (20)</li>
-					<li mod="stealth" roll="Stealth">Stealth: +5</li>
-					<li mod="athletics" roll="Athletics">Athletics: +2</li>
-					<li mod="insight" roll="Insight" class="exp">Insight: +8</li>
+					<li class="exp" mod="perception" roll="Perception">Perception: +10 (25)</li>
+					<li class="exp" mod="investigation" roll="Investigation">Investigation: +8 (23)</li>
+					<li mod="stealth" roll="Stealth">Stealth: +3</li>
+					<li mod="athletics" roll="Athletics">Athletics: +3</li>
+					<li mod="insight" roll="Insight" class="exp">Insight: +10</li>
 				</ul>
 				<h3>Combat Proficiencies</h3>
 				<ul class="no-bullets">
@@ -128,6 +128,9 @@
 					<li>Dwarvish</li>
 					<li>Gnomish</li>
 					<li>Sylvan</li>
+					<li>Undercommon</li>
+					<li>Infernal</li>
+					<li>Abyssal</li>
 				</ul>
 			</div>
 			<div class="abil">
@@ -220,6 +223,31 @@
 
 						You are also adept at evading creatures that rely on darkvision. While in darkness, you are invisible to any creature that relies on darkvision to see you in that darkness.</p>
 				</div>
+				<div>
+					<h3>Cunning Action</h3>
+					<p>Starting at 2nd level, your quick thinking and agility allow you to move and act quickly. You can take a bonus action on each of your turns in combat. This action can be used only to take the Dash, Disengage, or Hide action.</p>
+				</div>
+				<div>
+					<h3>Ear for Deceit</h3>
+					<p>When you choose this archetype at 3rd level, you develop a keen ear for picking out lies. Whenever you make a Wisdom (Insight) check to determine whether a creature is lying, treat a roll of 7 or lower on the d20 as an 8.</p>
+				</div>
+				<div>
+					<h3>Eye for Detail</h3>
+					<p>Starting at 3rd level, you can use a bonus action to make a Wisdom (Perception) check to spot a hidden creature or object or to make an Intelligence (Investigation) check to uncover or decipher clues.</p>
+				</div>
+				<div>
+					<h3>Insightful Fighting</h3>
+					<p>At 3rd level, you gain the ability to decipher an opponent’s tactics and develop a counter to them. As a bonus action, you make a Wisdom (Insight) check against a creature you can see that isn’t incapacitated, contested by the target’s Charisma (Deception) check. If you succeed, you can use your Sneak Attack against that target even if you don't have advantage on the attack roll, but not if you have disadvantage on it.</p>
+					<p>This benefit lasts for 1 minute or until you successfully use this feature against a different target.</p>
+				</div>
+				<div>
+					<h3>Linguist</h3>
+					<ul>
+						<li>Increase your INT by 1</li>
+						<li>You learn 3 languages of your choice</li>
+						<li>You can ably create written ciphers. Others cannot decipher a code you create unless you teach it to them, they succeed on an Intelligence check (DC = 17 (your Intelligence score + your proficiency bonus), or they use magic to decipher it.)</li>
+					</ul>
+				</div>
 				<h2>Inventory</h2>
 				<ul class="three-col">
 					<li>75 GP</li>
@@ -273,18 +301,18 @@
 			strength: 0,
 			dexterity: 3,
 			constitution: 2,
-			intelligence: 1,
+			intelligence: 2,
 			wisdom: 4,
 			charisma: -1,
 
-			str_save: 2,
-			dex_save: 5,
+			str_save: 3,
+			dex_save: 6,
 
-			perception: 8,
-			investigation: 5,
-			stealth: 5,
-			athletics: 2,
-			insight: 8,
+			perception: 10,
+			investigation: 8,
+			stealth: 6,
+			athletics: 3,
+			insight: 10,
 			init: 3+4,
 		}
 
