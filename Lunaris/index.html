@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Lunaris</title>
+		
+		<link rel = "stylesheet" type = "text/css" href = "style/style.css">
+	</head>
+	<body onload="Game.game.initialize();">
+		<div id="game">
+			<div id="main-menu" class="screen">
+				<ul class="menu">
+					<li><button id="id-new-game">New Game</button></li>
+					<li><button id="id-high-scores">High Scores</button></li>
+					<li><button id="id-settings">Settings</button></li>
+					<li><button id="id-credits">Credits</button></li>
+					<li><button id="id-level-editor">Level Editor</button></li>
+					<li><button id="id-level-editor-guide">Level Editor Guide</button></li>
+				</ul>
+			</div>
+			<div id="game-play" class="screen">
+				<canvas id="canvas" width="500" height="500"></canvas>
+			</div>
+			<div id="level-editor" class="screen"></div>
+			<div id="level-editor-about" class="screen">
+				<h1>Level Editor Guide</h1>
+				<div class="opaque-bg">
+					<p>First click sets left side height. Continue clicking to add points.</p>
+					<p>Hold shift while clicking to make the new line level.</p>
+					<p>Hold Ctrl to position the lander.</p>
+					<p>Press Enter to submit level to game.</p>
+					<p>Press Backspace to start over.</p>
+					<p>Play through all the standard levels to try your own.</p>
+				</div>
+				<ul class="menu">
+					<li><button id="id-back-lea">Back</button></li>
+				</ul>
+			</div>
+			<div id="high-scores" class="screen">
+				<div id="score-box"></div>
+				<ul class="menu">
+					<li><button id="id-clear-scores">Clear Scores</button></li>
+					<li><button id="id-back-scores">Back</button></li>
+				</ul>
+			</div>
+			<div id="settings" class="screen">
+				<button id="setting-thrust">Change Thrust Key</button><span id="current-thrust">ArrowUp</span><br />
+				<button id="setting-left">Change Left Key</button><span id="current-left">ArrowLeft</span><br />
+				<button id="setting-right">Change Right Key</button><span id="current-right">ArrowRight</span><br />
+				<ul class="menu">
+					<li><button id="id-back-settings">Back</button></li>
+				</ul>
+			</div>
+			<div id="credits" class="screen">
+				<h1>Lunaris</h1>
+				<img src="tramgle_logo.jpg" style="width:300px; margin:auto" />
+				<hr />
+				Sterling Tolley
+				<ul class="menu">
+					<li><button id="id-back-creds">Back</button></li>
+				</ul>
+			</div>
+		</div>
+
+		<script>
+			let Game = {
+				screens: {},
+				input: {},
+				objects: {},
+				render: [],
+				high_scores: [],
+			}
+		</script>
+		<script src="scripts/objects/tester.js"></script>
+		<script src="scripts/objects/particle.js"></script>
+		<script src="scripts/objects/sound.js"></script>
+		<script src="scripts/render/main.js"></script>
+		<script src="scripts/render/test.js"></script>
+		<script src="scripts/input/keyboard.js"></script>
+		<script src="scripts/input/mouse.js"></script>
+
+		<script src="scripts/game.js"></script>
+		<script src="scripts/screens/mainmenu.js"></script>
+		<script src="scripts/screens/gameplay.js"></script>
+		<script src="scripts/screens/highscores.js"></script>
+		<script src="scripts/screens/template.js"></script>
+		<script src="scripts/screens/level_editor.js"></script>
+		<script src="scripts/screens/settings.js"></script>
+	</body>
+</html>

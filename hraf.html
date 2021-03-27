@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Colresh</title>
+		<style>
+			h1, h2, h3, h4, h5, p {
+				line-height: 150%;
+				margin: 0px;
+			}
+
+			p {
+				text-indent: 3em;
+			}
+
+			.prof {
+				display: inline-block;
+				margin: 0;
+				width: 20%;
+			}
+
+			.abil {
+				display: inline-block;
+				vertical-align: top;
+				width: 70%;
+			}
+
+			.no-bullets li {
+				list-style: none;
+			}
+
+			.exp {
+				font-weight: 600;
+			}
+
+			.tbd {
+				color: green;
+			}
+
+			ul {
+				padding: 0px;
+				margin: 0px;
+				margin-left: 1em;
+			}
+
+			.no-indent {
+				margin-left: 0px;
+			}
+
+			.race {
+				font-style: italic;
+			}
+
+			.class  {
+				font-weight: 600;
+			}
+
+			.two-col {
+				column-count: 2;
+			}
+
+			.three-col {
+				column-count: 3;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="header">
+			<h1>Colresh</h1>
+			<span class="race">Variant Human</span>,
+			<span class="class">Gloom Stalker Ranger 3</span>,
+			<span class="class">Inquisitive Rogue 4</span><br/>
+			<span>Neutral Good, Follower of Irimar</span>
+			<input id="avrae" />
+		</div>
+		<div class="stats">
+			<table>
+				<tr>
+					<th>STR</th>
+					<th>DEX</th>
+					<th>CON</th>
+					<th>INT</th>
+					<th>WIS</th>
+					<th>CHA</th>
+				</tr>
+				<tr>
+					<td>11 (0)</td>
+					<td>16 (+3)</td>
+					<td>15 (+2)</td>
+					<td>14 (+2)</td>
+					<td>18 (+4)</td>
+					<td>9 (-1)</td>
+				</tr>
+			</table>
+			<div class="achp">
+				<div class="half">HP: 34</div>
+				<div class="half">AC: 15</div>
+				<div class="half" mod="init" roll="Initiative">INIT: + 7</div>
+			</div>
+		</div>
+		<div class="body">
+			<div class="prof">
+				<h3>Saving Throws</h3>
+				<ul class="no-bullets">
+					<li mod="str_save" roll="Strength Save">Strength: +2</li>
+					<li mod="dex_save" roll="Dexterity Save">Dexterity: +5</li>
+				</ul>
+				<h3>Skill Proficiencies</h3>
+				<ul class="no-bullets">
+					<li class="exp" mod="perception" roll="Perception">Perception: +10 (25)</li>
+					<li class="exp" mod="investigation" roll="Investigation">Investigation: +8 (23)</li>
+					<li mod="stealth" roll="Stealth">Stealth: +3</li>
+					<li mod="athletics" roll="Athletics">Athletics: +3</li>
+					<li mod="insight" roll="Insight" class="exp">Insight: +10</li>
+				</ul>
+				<h3>Combat Proficiencies</h3>
+				<ul class="no-bullets">
+					<li>Light Armor</li>
+					<li>Medium Armor</li>
+					<li>Shields</li>
+					<li>Simple Weapons</li>
+					<li>Martial Weapons</li>
+				</ul>
+				<h3>Languages</h3>
+				<ul>
+					<li>Common</li>
+					<li>Elvish</li>
+					<li>Draconic</li>
+					<li>Dwarvish</li>
+					<li>Gnomish</li>
+					<li>Sylvan</li>
+					<li>Undercommon</li>
+					<li>Infernal</li>
+					<li>Abyssal</li>
+				</ul>
+			</div>
+			<div class="abil">
+				<h2>Weapons</h2>
+				<h2>Abilities</h2>
+				<div>
+					<h3>Observant</h3>
+					<p> If you can see a creature's mouth while it is speaking a language you understand, you can interpret what it's saying by reading its lips.</p>
+					<p>You have +5 bonus to your passive Wisdom(Perception) and Intelligence(Investigation) scores.</p>
+				</div>
+				<div>
+					<h3>Favored Enemy : (Dwarves/Elves)</h3>
+					<p>You have advantage on Wisdom (Survival) checks to track your favored enemies, as well as on Intelligence checks to recall information about them.
+						When you gain this feature, you also learn one language of your choice that is spoken by your favored enemies, if they speak one at all.
+						You choose one additional favored enemy, as well as an associated language, at 6th and 14th level. As you gain levels, your choices should reflect the types of monsters you have encountered on your adventures.
+					</p>
+				</div>
+				<div>
+					<h3>Deft Explorer</h3>
+					<h4>Canny</h4>
+					<p> Choose one of your skill proficiencies. Your proficiency bonus is doubled for any ability check you make using the chosen skill.
+						You can also speak, read, and write 2 additional languages of your choice.</p>
+				</div>
+				<div>
+					<h3>Fighting Style : Blind Fighting</h3>
+					<p>You have blind sight with a range of 10 feet. Within that range, you can effectively see anything that isn't behind total cover, even if you're blinded or in darkness. Moreover, you can see an invisible creature within that range, unless the creature successfully hides from you.</p>
+				</div>
+				<div>
+					<h3>Spellcasting</h3>
+					<h4>Spells Known and Slots</h4>
+					<table>
+						<tr>
+							<th>Spells Known</th>
+							<th>Lvl 1</th>
+							<th>Lvl 2</th>
+						</tr>
+						<tr>
+							<td>2</td>
+							<td>3</td>
+							<td>-</td>
+						</tr>
+					</table>
+					<h4>Spell List</h4>
+					<ul class="no-bullets">
+						<li>Hunter's Mark</li>
+						<li>Cure Wounds</li>
+						<li>Fog Cloud</li>
+						<li>Disguise Self</li>
+					</ul>
+					<ul class="no-bullets no-indent">
+						<li class="exp">Save DC: 14</li>
+						<li class="exp">ATK Bonus: +6</li>
+					</ul>
+				</div>
+				<div>
+					<h3>Expertise</h3>
+					<p>
+						Choose 2 of your skill proficiencies. Your proficiency bonus is doubled for any ability check you make that uses either of the chosen proficiencies.
+					</p>
+				</div>
+				<div>
+					<h3>Sneak Attack</h3>
+					<p>
+						Once per turn, you can deal an extra 1d6 damage to one creature you hit with an attack if you have advantage on the attack roll. The attack must use a finesse or ranged weapon. You don't need advantage on the attack roll if another enemy of the target is within 5 feet of it, that enemy isn't incapacitated, and you don't have disadvantage on the attack roll.
+					</p>
+				</div>
+				<div>
+					<h3>Thieves' Cant</h3>
+					<p>Thieves can't do nothing write, evun spel</p>
+				</div>
+				<div>
+					<h3>Primeval Awareness</h3>
+					<p>
+						Beginning at 3rd level, you can use your action and expend one ranger spell slot to focus your awareness on the region around you. For 1 minute per level of the spell slot you expend, you can sense whether the following types of creatures are present within 1 mile of you (or within up to 6 miles if you are in your favored terrain): aberrations, celestials, dragons, elementals, fey, fiends, and undead. This feature doesn’t reveal the creatures’ location or number.
+					</p>
+				</div>
+				<div>
+					<h3>Gloom Stalker Magic</h3>
+					<p>The following spells counts as a ranger spell for you, but do not count against the number of ranger spells you know : Disguise Self</p>
+				</div>
+				<div>
+					<h3>Dread Ambusher</h3>
+					<p>At 3rd level, you master the art of the ambush. You can give yourself a bonus to your initiative rolls equal to your Wisdom modifier.
+
+						At the start of your first turn of each combat, your walking speed increases by 10 feet, which lasts until the end of that turn. If you take the Attack action on that turn, you can make one additional weapon attack as part of that action. If that attack hits, the target takes an extra 1d8 damage of the weapon's damage type.</p>
+				</div>
+				<div>
+					<h3>Umbral Sight</h3>
+					<p>At 3rd level, you gain darkvision out to a range of 60 feet. If you already have darkvision from your race, its range increases by 30 feet.
+
+						You are also adept at evading creatures that rely on darkvision. While in darkness, you are invisible to any creature that relies on darkvision to see you in that darkness.</p>
+				</div>
+				<div>
+					<h3>Cunning Action</h3>
+					<p>Starting at 2nd level, your quick thinking and agility allow you to move and act quickly. You can take a bonus action on each of your turns in combat. This action can be used only to take the Dash, Disengage, or Hide action.</p>
+				</div>
+				<div>
+					<h3>Ear for Deceit</h3>
+					<p>When you choose this archetype at 3rd level, you develop a keen ear for picking out lies. Whenever you make a Wisdom (Insight) check to determine whether a creature is lying, treat a roll of 7 or lower on the d20 as an 8.</p>
+				</div>
+				<div>
+					<h3>Eye for Detail</h3>
+					<p>Starting at 3rd level, you can use a bonus action to make a Wisdom (Perception) check to spot a hidden creature or object or to make an Intelligence (Investigation) check to uncover or decipher clues.</p>
+				</div>
+				<div>
+					<h3>Insightful Fighting</h3>
+					<p>At 3rd level, you gain the ability to decipher an opponent’s tactics and develop a counter to them. As a bonus action, you make a Wisdom (Insight) check against a creature you can see that isn’t incapacitated, contested by the target’s Charisma (Deception) check. If you succeed, you can use your Sneak Attack against that target even if you don't have advantage on the attack roll, but not if you have disadvantage on it.</p>
+					<p>This benefit lasts for 1 minute or until you successfully use this feature against a different target.</p>
+				</div>
+				<div>
+					<h3>Linguist</h3>
+					<ul>
+						<li>Increase your INT by 1</li>
+						<li>You learn 3 languages of your choice</li>
+						<li>You can ably create written ciphers. Others cannot decipher a code you create unless you teach it to them, they succeed on an Intelligence check (DC = 17 (your Intelligence score + your proficiency bonus), or they use magic to decipher it.)</li>
+					</ul>
+				</div>
+				<h2>Inventory</h2>
+				<ul class="three-col">
+					<li>75 GP</li>
+					<li>Studded Leather</li>
+					<li>Rapier</li>
+					<li>Burglar's Pack</li>
+					<ul>
+						<li>Backpack</li>
+						<li>bag of 1000 ball bearings</li>
+						<li>10ft string</li>
+						<li>bell</li>
+						<li>5 candles</li>
+						<li>crowbar</li>
+						<li>hammer</li>
+						<li>10 pitons</li>
+						<li>hooded lantern</li>
+						<li>2 flasks of oil</li>
+						<li>5 rations</li>
+						<li>tinderbox</li>
+						<li>waterskin</li>
+					</ul>
+					<li>Diplomat's Pack</li>
+					<ul>
+						<li>Chest</li>
+						<li>2 cases for maps and scrolls</li>
+						<li>Fine clothes</li>
+						<li>Bottle of Ink</li>
+						<li>Ink Pen</li>
+						<li>lamp</li>
+						<li>2 flasks of oil</li>
+						<li>5 sheets of paper</li>
+						<li>Perfume (Vial)</li>
+						<li>Sealing Wax</li>
+						<li>Soap</li>
+					</ul>
+					<li>Thieve' Tools</li>
+					<li>Manacles</li>
+					<li>Forgery Kit</li>
+					<li>--- --- ---</li>
+					<li>A purple handkerchief embroidered with the name of a powerful archmage</li>
+				</ul>
+				<h2>Backstory</h2>
+				<p class="three-col">
+					At the age of 5 Colresh's family moved to the town of Brownsburg. It was there that his father, Barold, found employment as a blacksmith's apprentice for several years. Eventually Barold inherited the smithy from his master took on apprentices of his own. During this time Colresh would often be found working his way through the many caves and forests that dotted the hills near Brownsburg. As he matured he took a liking to books of learning, inspiring him to search for truth and reason in all things. He took a particular interest in the motivations of the people around him. At the age of 20, a group of mercenaries kidnapped a prominent political figure, who was visiting Brownsburg. Using his excellent skills of perception and insight, he was able to track down the mercenaries and recover the prominent political figure. Since then Colresh has travelled from town to town serving as both an investigator and political ally.
+				</p>
+			</div>
+		</div>
+	</body>
+	<script>
+		let mods = {
+			strength: 0,
+			dexterity: 3,
+			constitution: 2,
+			intelligence: 2,
+			wisdom: 4,
+			charisma: -1,
+
+			str_save: 3,
+			dex_save: 6,
+
+			perception: 10,
+			investigation: 8,
+			stealth: 6,
+			athletics: 3,
+			insight: 10,
+			init: 3+4,
+		}
+
+		function generateRoll(data) {
+			let res = "!r 1d20";
+			if (data.adv && ! data.dis) {
+				res = "!r 2d20kh1"
+			} else if (data.dis && ! data.adv) {
+				res = "!r 2d20kl1"
+			}
+
+			if (data.mod) {
+				res += `+${data.mod}`;
+			}
+
+			if (data.roll) {
+				res += ` ${data.roll}`;
+			}
+
+			return res;
+		}
+
+		onclick = (e) => {
+			let data = {};
+			if (e.target.getAttribute("mod")) {
+				data.mod = mods[e.target.getAttribute("mod")];
+			}
+			if (e.target.getAttribute("roll")) {
+				data.roll = e.target.getAttribute("roll");
+			}
+			if (e.ctrlKey) {
+				data.adv = true;
+			}
+			if (e.shiftKey) {
+				data.dis = true;
+			}
+
+			if (data.mod) {
+				let rollCommand = generateRoll(data);
+				document.getElementById("avrae").value = rollCommand;
+			}
+		}
+	</script>
+</html>

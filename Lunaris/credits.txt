@@ -1,0 +1,2 @@
+bg.jpg
+	nasa.gov : https://www.nasa.gov/sites/default/files/thumbnails/image/pia22313.jpg
