@@ -20,6 +20,8 @@ Texture = function(spec){
 	return that;
 };
 
+TOTAL_COINAGE = 0;
+
 IT_GENERIC = 0;
 IT_COIN = 1;
 IT_BOMB = 2;
@@ -63,6 +65,7 @@ let Coin = function(spec) {
 	let that = Item(spec, IT_COIN)
 
 	that.value = 1+~~(Math.random()*2)*4;
+	TOTAL_COINAGE += that.value;
 	that.texture = (that.value == 5) ? COIN5_TEXTURE : COIN_TEXTURE;
 
 	return that;
@@ -432,6 +435,7 @@ Game = (function(){
 		} else {
 			c.fillStyle = "black";
 			c.fillText(`Final Score: ${score}`,0,50);
+			c.fillText(`Total Money Created: ${TOTAL_COINAGE}`)
 		}
 	}
 
