@@ -21,6 +21,7 @@ Texture = function(spec){
 };
 
 TOTAL_COINAGE = 0;
+let timer = 0;
 
 IT_GENERIC = 0;
 IT_COIN = 1;
@@ -30,6 +31,8 @@ IT_HEART = 4;
 IT_STRETCH = 5;
 IT_WAND = 6;
 
+ITEM_UID = 0;
+
 let Item = function(spec, type=IT_GENERIC) {
 	let that = {
 		center: spec.center,
@@ -37,9 +40,12 @@ let Item = function(spec, type=IT_GENERIC) {
 		type: type,
 		dim: spec.dim || {w: 20, h:20},
 		texture: COIN_TEXTURE,
+		timer: 0,
+		uuid: ITEM_UID++,
 	}
 
 	that.update = function(elapsedTime) {
+		that.timer += elapsedTime;
 		that.vel.y += 0.02;
 		that.center.y += that.vel.y;
 		that.center.x += that.vel.x;
@@ -67,6 +73,10 @@ let Coin = function(spec) {
 	that.value = 1+~~(Math.random()*2)*4;
 	TOTAL_COINAGE += that.value;
 	that.texture = (that.value == 5) ? COIN5_TEXTURE : COIN_TEXTURE;
+
+	that.render = function(c) {
+		that.texture.render(c, that.center.x-that.dim.w*Math.cos(0.01*that.timer)/2, that.center.y-that.dim.h/2,that.dim.w*Math.cos(0.01*that.timer),that.dim.h);
+	}
 
 	return that;
 }
@@ -330,6 +340,7 @@ HEART_TEXTURE = Texture({src: "assets/heart.png"});
 FAIRY_TEXTURE = Texture({src: "assets/fairy.png"});
 WAND_TEXTURE = Texture({src: "assets/wand.png"});
 BUCKET_TEXTURE = Texture({src: "assets/bucket.png"});
+CAVE_TEXTURE = Texture({src: "assets/cave.png"});
 
 Game = (function(){
 	let canvas = document.getElementById("canvas");
@@ -359,6 +370,7 @@ Game = (function(){
 	}
 
 	function update(elapsedTime) {
+		timer += elapsedTime;
 		if (that.lives > 0) {
 			let currentMultiplier = put.getMultiplier();
 			guy.update(elapsedTime);
@@ -403,7 +415,7 @@ Game = (function(){
 	}
 
 	function render() {
-		c.clearRect(0,0,500,500);
+		CAVE_TEXTURE.render(c,0,0,500,500);
 		if (that.lives > 0) {
 
 			let onTop = [];
@@ -430,12 +442,12 @@ Game = (function(){
 			//c.fillText(`x${put.getActiveCount()}`,0,60);
 
 			for (let i = 0; i < that.lives; i++) {
-				HEART_TEXTURE.render(c, i*30,0,30,30);
+				HEART_TEXTURE.render(c, i*30,0,30+Math.sin(i+timer*0.01),30);
 			}
 		} else {
 			c.fillStyle = "black";
 			c.fillText(`Final Score: ${score}`,0,50);
-			c.fillText(`Total Money Created: ${TOTAL_COINAGE}`)
+			c.fillText(`Total Money Created: ${TOTAL_COINAGE}`,0,70);
 		}
 	}
 
