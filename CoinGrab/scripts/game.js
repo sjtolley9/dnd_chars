@@ -345,7 +345,7 @@ CAVE_TEXTURE = Texture({src: "assets/cave.png"});
 Game = (function(){
 	let canvas = document.getElementById("canvas");
 	let c = canvas.getContext("2d");
-	let f = new FontFace("Runes","url(assets/fonts/ComicRunes.otf)")
+	let f = new FontFace("Runes","url(assets/fonts/firstorder.ttf)")
 	f.load().then(function(font) {
 		document.fonts.add(font);
 	});
