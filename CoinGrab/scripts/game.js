@@ -345,6 +345,10 @@ CAVE_TEXTURE = Texture({src: "assets/cave.png"});
 Game = (function(){
 	let canvas = document.getElementById("canvas");
 	let c = canvas.getContext("2d");
+	let f = new FontFace("Runes","url(assets/fonts/ComicRunes.otf)")
+	f.load().then(function(font) {
+		document.fonts.add(font);
+	});
 	let lastTimeStamp = performance.now();
 
 	let that = {
@@ -416,6 +420,7 @@ Game = (function(){
 
 	function render() {
 		CAVE_TEXTURE.render(c,0,0,500,500);
+		c.font = "20px Runes";
 		if (that.lives > 0) {
 
 			let onTop = [];
