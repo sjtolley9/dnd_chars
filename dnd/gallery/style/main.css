@@ -1,0 +1,66 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&family=Roboto:wght@300&display=swap');
+
+html, body {
+    margin: 0px;
+    padding: 0px;
+    font-family: Roboto;
+}
+
+h1, h2, h3 {
+    font-family: 'Open Sans';
+    text-align: center;
+    line-height: 100%;
+}
+
+article {
+    display: grid;
+    grid-gap: 15px;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    padding: 0px 10px;
+}
+
+.center {
+    text-align: center;
+}
+
+.quote {
+    font-style: italic;
+    margin: 0px auto;
+}
+
+.wide {
+    grid-column: span 2;
+}
+
+.tall {
+    grid-column: span 2;
+}
+
+.large {
+    font-size: large;
+    line-height: 125%;
+}
+
+.banner {
+    grid-column: 1/-1;
+}
+
+.item {
+    /*display: flex;*/
+    align-items: center;
+    justify-content: center;
+    background-image: linear-gradient(
+        0deg
+        , #F1f1f1 0%, #FAFAFA 100%);
+    box-shadow: 0px 0px 2px #BBB;
+    padding: 0px 10px;
+    text-align: center;
+}
+
+.no-pad {
+    padding: 0px;
+}
+
+.img {
+    height: 400px;
+}
