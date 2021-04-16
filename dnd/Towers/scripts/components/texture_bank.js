@@ -45,3 +45,6 @@ Game.assets.textures.loadTexture("turret63", "images/tower-defense-turrets/turre
 Game.assets.textures.loadTexture("turret71", "images/tower-defense-turrets/turret-7-1.png");
 Game.assets.textures.loadTexture("turret72", "images/tower-defense-turrets/turret-7-2.png");
 Game.assets.textures.loadTexture("turret73", "images/tower-defense-turrets/turret-7-3.png");
+
+
+Game.assets.textures.loadTexture("bg1", "images/bg/tile-1-center.gif");

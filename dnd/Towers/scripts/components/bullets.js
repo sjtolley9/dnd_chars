@@ -13,7 +13,7 @@ Game.components.Bullet = function(center, vel, power=1) {
     }
 
     that.render = function() {
-        Game.renderer.core.drawPoint(that.center, "black");
+        Game.renderer.core.drawPoint(that.center, "yellow");
     }
 
     return that;

@@ -4,7 +4,7 @@ Game.components.Enemy = Enemy = function(spec) {
         hp: spec.hp,
         payload: spec.payload,
         dir: 3,
-        speed: 0.08,
+        speed: spec.speed || 0.08,
         immune: true,
         mhp: spec.hp,
     }

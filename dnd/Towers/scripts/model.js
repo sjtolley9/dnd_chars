@@ -1,3 +1,13 @@
+/* Randomize array in-place using Durstenfeld shuffle algorithm */
+function shuffleArray(array) {
+    for (var i = array.length - 1; i > 0; i--) {
+        var j = Math.floor(Math.random() * (i + 1));
+        var temp = array[i];
+        array[i] = array[j];
+        array[j] = temp;
+    }
+}
+
 Game.model = (function(input, components, renderer){
     // Define inputs
 
@@ -31,16 +41,27 @@ Game.model = (function(input, components, renderer){
                 t.upgrade();
             }
             that.towers.push(t);
+            return true;
         }
+        return false;
     }
 
-    that.attemptTowerPlacement(0,4,BaryonCannon)
-    that.attemptTowerPlacement(4,5,HyperMachineGun)
-    //that.attemptTowerPlacement(0,7,NeutronSpewer)
-
-    console.log("Enemies: ", that.enemies.length);
-
-    //that.towers[that.towers.length-1].selected = true;
+    document.getElementById("canvas").onmousedown = function(e) {
+        let x = Math.floor(e.offsetX/46);
+        let y = Math.floor(e.offsetY/46);
+        
+        if (!that.attemptTowerPlacement(x,y,HyperMachineGun)) {
+            components.navmesh.removeObstacle(x,y);
+            let m = [];
+            for (let i in that.towers) {
+                if (that.towers[i].position.x != x || that.towers[i].position.y != y) {
+                    m.push(that.towers[i]);
+                }
+            }
+            that.towers = m;
+            
+        }
+    }
 
     that.initialize = function() {
         // Reset Game/Maybe load save?
@@ -60,14 +81,14 @@ Game.model = (function(input, components, renderer){
             that.enemies.push(
                 Enemy({
                     center: Vector2D(-23,253),
-                    hp: 3,
+                    hp: 50,
                     payload: 1
                 })
             );
             that.enemies.push(
                 Enemy({
                     center: Vector2D(253,-23),
-                    hp: Math.random()*5,
+                    hp: 50,
                     payload: 1
                 })
             );
@@ -117,6 +138,19 @@ Game.model = (function(input, components, renderer){
 
     that.render = function() {
         renderer.core.clear();
+
+        for (let i = 0; i < 11; i++) {
+            for (let j = 0; j < 11; j++) {
+                renderer.textures.renderTexture(
+                    Game.assets.textures.getTexture("bg1"),
+                    {
+                        center: Vector2D(i*46+23,j*46+23),
+                        rotation: 0, 
+                        size: Vector2D(46,46)
+                    }
+                );
+            }
+        }
 
         for (let i in that.towers) {
             renderer.tower.renderTower(that.towers[i]);

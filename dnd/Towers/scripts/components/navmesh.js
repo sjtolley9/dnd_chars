@@ -206,6 +206,7 @@ Game.components.navmesh = (function() {
 
     that.addObstacle = function(x,y) {
         let v = x*11+y;
+        if (x < 0 || x > 10 || y < 0 || y > 10) return false;
 
         if (v == 5 || v == 55 || v == 65 || v == 115 || that.mesh[v].blocked) {
             return false;
@@ -292,9 +293,11 @@ Game.components.navmesh = (function() {
         return result;
     }
 
-    that.removeObstacle = function(pos) {
-        if (pos.x >= 0 && pos.x < 11 & pos.y >= 0 && pos.y < 11) {
-        }
+    that.removeObstacle = function(x,y) {
+        if (x < 0 || x > 10 || y < 0 || y > 10) return false;
+        
+        let v = x*11+y;
+        that.mesh[v].blocked = false;
     }
 
     return that;

@@ -130,7 +130,7 @@ Game.components.HyperMachineGun = HyperMachineGun = function(spec) {
         that.speed += 2;
         that.range += 1;
         that.level += 1;
-        if (that.level > 1) {
+        if (that.level > 1 && that.level < 4) {
             that.texture = Game.assets.textures.getTexture(`turret3${that.level}`);
         }
     }
