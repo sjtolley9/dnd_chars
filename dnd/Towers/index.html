@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Sci-Fi Tower Defense</title>
+        <link rel="stylesheet" type="text/css" href="style/style.css">
+    </head>
+    <body onload="Game.game.initialize();">
+        <div id="game">
+            <div id="main-menu" class="screen">
+                <h1>Sci-Fi Tower Defense</h1>
+                <ul class="menu">
+                    <li><button id="id-new-game">New Game</button></li>
+                </ul>
+            </div>
+            <div id="game-play" class="screen">
+                <canvas id="canvas" width="506" height="506"></canvas>
+            </div>
+            <div id="credits" class="screen">
+
+            </div>
+        </div>
+        <!-- Scripts-->
+        <script>
+            let Game = {
+                screens: {},
+                input: {},
+                components: {},
+                renderer: {},
+                assets: {},
+            };
+        </script>
+
+        <script src="scripts/components/utils.js"></script>
+
+        <script src="scripts/game.js"></script>
+        <script src="scripts/screens/template.js"></script>
+        <script src="scripts/screens/mainmenu.js"></script>
+
+        <script src="scripts/components/textures.js"></script>
+        <script src="scripts/components/texture_bank.js"></script>
+        <script src="scripts/components/bullets.js"></script>
+        <script src="scripts/components/towers.js"></script>
+        <script src="scripts/components/enemy.js"></script>
+
+        <script src="scripts/render/core.js"></script>
+        <script src="scripts/render/textures.js"></script>
+        <script src="scripts/render/tower.js"></script>
+
+        <script src="scripts/components/navmesh.js"></script>
+
+        <script src="scripts/model.js"></script>
+        <script src="scripts/screens/gameplay.js"></script>
+    </body>
+</html>
