@@ -82,7 +82,7 @@ Game.components.NeutronSpewer = NeutronSpewer = function(spec) {
         that.power += 1;
         that.speed += 1;
         that.level += 1;
-        if (that.level > 1) {
+        if (that.level > 1 && that.level < 4) {
             that.texture = Game.assets.textures.getTexture(`turret1${that.level}`);
         }
     }
@@ -105,7 +105,7 @@ Game.components.BaryonCannon = BaryonCannon = function(spec) {
         that.speed += 1;
         that.range += 1;
         that.level += 1;
-        if (that.level > 1) {
+        if (that.level > 1 && that.level < 4) {
             that.texture = Game.assets.textures.getTexture(`turret2${that.level}`);
         }
     }

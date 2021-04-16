@@ -50,7 +50,7 @@ Game.model = (function(input, components, renderer){
         let x = Math.floor(e.offsetX/46);
         let y = Math.floor(e.offsetY/46);
         
-        if (!that.attemptTowerPlacement(x,y,HyperMachineGun)) {
+        if (!that.attemptTowerPlacement(x,y,HyperMachineGun,199)) {
             components.navmesh.removeObstacle(x,y);
             let m = [];
             for (let i in that.towers) {
